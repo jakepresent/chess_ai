@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VdV-xk-Xsy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Kse-ur-qzT">
+            <objects>
+                <viewController id="w8S-Td-uks" customClass="ViewController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g6m-Uk-ONw"/>
+                        <viewControllerLayoutGuide type="bottom" id="wlb-48-lkD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fVI-3u-Yls">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chess" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AE2-y9-M5y">
+                                <rect key="frame" x="16" y="30" width="55" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Board" translatesAutoresizingMaskIntoConstraints="NO" id="MZp-VS-lr8">
+                                <rect key="frame" x="0.0" y="65.5" width="320" height="320"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MZp-VS-lr8" secondAttribute="height" multiplier="1:1" id="RrH-sI-vmY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" misplaced="YES" text="White's Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kqf-YH-yQe">
+                                <rect key="frame" x="16" y="438" width="126" height="22"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jjj-Cn-gAC">
+                                <rect key="frame" x="191" y="411" width="113" height="34"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <state key="normal" title="White: Human"/>
+                                <connections>
+                                    <action selector="AITapped:" destination="w8S-Td-uks" eventType="touchUpInside" id="nLu-ju-jCa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6RY-tU-NX4">
+                                <rect key="frame" x="200" y="450" width="104" height="34"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <state key="normal" title="Black: Human"/>
+                                <connections>
+                                    <action selector="AITapped:" destination="w8S-Td-uks" eventType="touchUpInside" id="09r-0q-fiM"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="by Jake Present" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PsK-bC-UD9">
+                                <rect key="frame" x="169" y="30" width="136" height="25.5"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" misplaced="YES" text="Black's Score: 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKp-q9-TBe">
+                                <rect key="frame" x="16" y="475" width="118" height="22"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="White's Turn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsJ-dm-HJ6">
+                                <rect key="frame" x="16" y="401" width="99" height="22"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.12619982547993014" green="0.12619982547993014" blue="0.12619982547993014" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="MZp-VS-lr8" firstAttribute="centerX" secondItem="fVI-3u-Yls" secondAttribute="centerX" priority="999" id="5oY-XE-eRN"/>
+                            <constraint firstItem="wlb-48-lkD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6RY-tU-NX4" secondAttribute="bottom" constant="25" id="6yc-1f-6hZ"/>
+                            <constraint firstItem="Jjj-Cn-gAC" firstAttribute="top" secondItem="WsJ-dm-HJ6" secondAttribute="top" constant="10" id="74d-pz-AXx"/>
+                            <constraint firstItem="kqf-YH-yQe" firstAttribute="leading" secondItem="WsJ-dm-HJ6" secondAttribute="leading" id="7uy-gh-lIo"/>
+                            <constraint firstItem="AE2-y9-M5y" firstAttribute="top" secondItem="g6m-Uk-ONw" secondAttribute="bottom" constant="10" id="8IQ-bP-4wB"/>
+                            <constraint firstItem="PsK-bC-UD9" firstAttribute="trailing" secondItem="MZp-VS-lr8" secondAttribute="trailing" constant="-15" id="Cyd-yJ-b9A"/>
+                            <constraint firstItem="wlb-48-lkD" firstAttribute="top" secondItem="MZp-VS-lr8" secondAttribute="bottom" priority="999" id="FKr-9t-gVM"/>
+                            <constraint firstItem="wlb-48-lkD" firstAttribute="top" relation="lessThanOrEqual" secondItem="6RY-tU-NX4" secondAttribute="bottom" priority="250" constant="40" id="Hbj-43-u53"/>
+                            <constraint firstItem="WsJ-dm-HJ6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MZp-VS-lr8" secondAttribute="bottom" constant="10" id="Kow-3I-2Hp"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="AE2-y9-M5y" secondAttribute="leading" id="McI-df-RfK"/>
+                            <constraint firstItem="WsJ-dm-HJ6" firstAttribute="leading" secondItem="fVI-3u-Yls" secondAttribute="leadingMargin" id="OL1-vL-tlK"/>
+                            <constraint firstItem="6RY-tU-NX4" firstAttribute="top" secondItem="Jjj-Cn-gAC" secondAttribute="bottom" constant="5" id="PFx-F0-Kmc"/>
+                            <constraint firstItem="MZp-VS-lr8" firstAttribute="top" secondItem="PsK-bC-UD9" secondAttribute="bottom" priority="250" constant="10" id="Qpv-N4-ktC"/>
+                            <constraint firstItem="MZp-VS-lr8" firstAttribute="top" relation="greaterThanOrEqual" secondItem="g6m-Uk-ONw" secondAttribute="bottom" id="RFr-TI-h0p"/>
+                            <constraint firstItem="MZp-VS-lr8" firstAttribute="top" secondItem="g6m-Uk-ONw" secondAttribute="bottom" priority="250" constant="48" id="W2N-0d-WW6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jjj-Cn-gAC" secondAttribute="trailing" id="WGZ-Tk-rJZ"/>
+                            <constraint firstItem="PsK-bC-UD9" firstAttribute="top" secondItem="g6m-Uk-ONw" secondAttribute="bottom" constant="10" id="aAn-JZ-K35"/>
+                            <constraint firstItem="WsJ-dm-HJ6" firstAttribute="top" secondItem="MZp-VS-lr8" secondAttribute="bottom" priority="249" constant="50" id="be1-l9-wyp"/>
+                            <constraint firstItem="OKp-q9-TBe" firstAttribute="top" secondItem="kqf-YH-yQe" secondAttribute="bottom" constant="15" id="hQJ-FX-ctQ"/>
+                            <constraint firstItem="wlb-48-lkD" firstAttribute="top" secondItem="OKp-q9-TBe" secondAttribute="bottom" priority="250" constant="50" id="mwC-rR-YfI"/>
+                            <constraint firstItem="wlb-48-lkD" firstAttribute="top" relation="greaterThanOrEqual" secondItem="OKp-q9-TBe" secondAttribute="bottom" constant="10" id="oHN-0L-v70"/>
+                            <constraint firstItem="OKp-q9-TBe" firstAttribute="leading" secondItem="kqf-YH-yQe" secondAttribute="leading" id="p9u-DB-HNl"/>
+                            <constraint firstItem="MZp-VS-lr8" firstAttribute="top" secondItem="AE2-y9-M5y" secondAttribute="bottom" priority="250" constant="10" id="qXR-tj-v8G"/>
+                            <constraint firstItem="MZp-VS-lr8" firstAttribute="top" secondItem="g6m-Uk-ONw" secondAttribute="bottom" constant="48" id="rb7-Kw-ct3"/>
+                            <constraint firstItem="kqf-YH-yQe" firstAttribute="top" secondItem="WsJ-dm-HJ6" secondAttribute="bottom" constant="15" id="sv2-WB-Yi8"/>
+                            <constraint firstItem="6RY-tU-NX4" firstAttribute="trailing" secondItem="Jjj-Cn-gAC" secondAttribute="trailing" id="xeZ-Nj-QfP"/>
+                            <constraint firstItem="WsJ-dm-HJ6" firstAttribute="leading" secondItem="MZp-VS-lr8" secondAttribute="trailing" priority="999" constant="30" id="yAi-8S-jXR"/>
+                            <constraint firstItem="MZp-VS-lr8" firstAttribute="leading" secondItem="fVI-3u-Yls" secondAttribute="leading" id="yNI-o8-BHR"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="rb7-Kw-ct3"/>
+                                <exclude reference="yAi-8S-jXR"/>
+                                <exclude reference="FKr-9t-gVM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Restart" style="plain" id="S2T-Rn-9BJ">
+                            <connections>
+                                <action selector="restartTapped:" destination="w8S-Td-uks" id="hi1-NB-TiV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="fbS-5C-q5S"/>
+                        <barButtonItem title="Flip" style="plain" id="OQW-8s-WsK">
+                            <connections>
+                                <action selector="flipTapped:" destination="w8S-Td-uks" id="1GO-gM-t4E"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="PzF-UB-Qh9"/>
+                        <barButtonItem style="plain" systemItem="action" id="Mfn-6a-SHT">
+                            <connections>
+                                <action selector="shareTapped:" destination="w8S-Td-uks" id="dtR-UJ-VX0"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="MMF-qF-kxA"/>
+                    <connections>
+                        <outlet property="blackAIButton" destination="6RY-tU-NX4" id="Xvd-I6-ZXl"/>
+                        <outlet property="blackScoreLabel" destination="OKp-q9-TBe" id="yJx-AH-EOM"/>
+                        <outlet property="boardAlignTop1" destination="W2N-0d-WW6" id="t7I-zh-ZP6"/>
+                        <outlet property="boardAlignTop2" destination="RFr-TI-h0p" id="M93-3O-1og"/>
+                        <outlet property="boardAlignTop3" destination="rb7-Kw-ct3" id="EzA-I6-XBc"/>
+                        <outlet property="boardBottomAlign" destination="FKr-9t-gVM" id="xpm-Nn-3hd"/>
+                        <outlet property="boardCenterX" destination="5oY-XE-eRN" id="sAq-zf-QnI"/>
+                        <outlet property="boardView" destination="MZp-VS-lr8" id="CER-DG-dr8"/>
+                        <outlet property="bottomTurnLabel10" destination="Kow-3I-2Hp" id="78b-8C-tz8"/>
+                        <outlet property="bottomTurnLabel50" destination="be1-l9-wyp" id="gff-fc-e8L"/>
+                        <outlet property="byJakePresentLabel" destination="PsK-bC-UD9" id="8md-HX-MKY"/>
+                        <outlet property="chessLabel" destination="AE2-y9-M5y" id="N6X-SY-d1v"/>
+                        <outlet property="flipButton" destination="OQW-8s-WsK" id="dIG-Ro-CJU"/>
+                        <outlet property="labelsAlignBoard" destination="yAi-8S-jXR" id="Gnn-gi-X2o"/>
+                        <outlet property="labelsAlignLeft" destination="OL1-vL-tlK" id="aiV-W9-3wk"/>
+                        <outlet property="restartButton" destination="S2T-Rn-9BJ" id="9lr-wi-nAO"/>
+                        <outlet property="turnLabel" destination="WsJ-dm-HJ6" id="5Vw-Qd-Sg7"/>
+                        <outlet property="whiteAIButton" destination="Jjj-Cn-gAC" id="8q0-N7-alI"/>
+                        <outlet property="whiteScoreLabel" destination="kqf-YH-yQe" id="eBf-nC-I3c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2O-bj-lTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="497"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="mvE-Tf-KK3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="VdV-xk-Xsy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MRO-90-gVY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="0fR-ej-bnW">
+                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.22988928883071547" green="0.22988928883071547" blue="0.22988928883071547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.14643324607329844" green="0.14643324607329844" blue="0.14643324607329844" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="w8S-Td-uks" kind="relationship" relationship="rootViewController" id="XSr-uX-oBw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rTx-gx-Hxv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="255" y="336"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Board" width="320" height="320"/>
+    </resources>
+</document>
